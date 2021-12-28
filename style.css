@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap'); /* Font for header links */
 @import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap'); /* Font for logo */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap'); /* Font for paragraphs */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap'); /* Font for heading */
 
 html {
 	scroll-behavior: smooth;
@@ -30,17 +31,19 @@ p1 {
 	top: 0;
 	height: 70px;
 	width: 100vw;
-	display: flex;
 	background: rgba(0, 0, 0, 0.8);
 	justify-content: space-between;
 	padding: 0 60px;
 	align-items: center;
 	font-family: 'PT Sans', sans-serif;
+	display: flex;
+	z-index: 1;
+
 }
 
 .navbar h1 {
 	color: #fff;
-	font-family: 'Pushster', cursive;
+	font-family: 'PT Serif', cursive;
 	font-size: 30px;
 }
 
@@ -67,7 +70,7 @@ p1 {
 .underline {
 	display: inline-block;
 	position: relative;
-	cursor: pointer;
+	cursor: default;
 }
 
 .underline:after {
@@ -87,6 +90,53 @@ p1 {
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
+.skyline {
+	position: relative;
+}
+
+.skyline-img {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.skyline h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	color: #fd5e53;
+	font-size: 70px;
+	background: #242582;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	padding: 0 30px;
+	font-family: 'PT Serif', sans-serif;
+}
+
+.nav-display {
+	height: 70px;
+	background: #000000; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-display a {
+	padding: 0 50px;
+	text-decoration: none;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+	color: #fff;
+	transition: all 0.3s ease 0s;
+}
+
+.nav-display a:hover {
+	transform: scale(1.2);
+}
+
 .about-me {
 	padding: 70px 0;
 	height: 100vh;
@@ -110,6 +160,7 @@ p1 {
 .me-desc {
 	width: 15vw;
 	color: #fff;
+	font-size: 20px;
 }
 
 .my-projects {
